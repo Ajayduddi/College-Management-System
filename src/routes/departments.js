@@ -8,7 +8,7 @@ import { generateDeptId } from '../utils/helper.js';
 import { Roles } from '../models/roles.js';
 
 const route = Router();
-// route.use(passport.authenticate('jwt', { session: false }));
+route.use(passport.authenticate('jwt', { session: false }));
 
 // get departments
 route.get('/', async (req, res) => {
@@ -30,8 +30,8 @@ route.post('/', checkSchema(department_validation), (req, res, next) => {
     next();
 }, async (req, res) => {
     try {
-        const role = Roles.find({ name: "Admin" });
-        if (true) { 
+         const role = await Roles.findOne({ name: "Admin" });
+        if (req.user.role.equals(role._id)) { 
             const data = matchedData(req);
             data.dept_id = generateDeptId();
             const newDept = await Departments.create(data);
@@ -59,8 +59,8 @@ route.post('/:id', checkSchema(department_validation), (req, res, next) => {
         return res.status(400).send({ result: false, message: "Invalid id", data: null });
     }
     try {
-       const role = Roles.find({ name: "Admin" });
-        if (true) {
+        const role = await Roles.findOne({ name: "Admin" });
+        if (req.user.role.equals(role._id)) {
             const data = matchedData(req);
             const updated = await Departments.findByIdAndUpdate(id, data);
             res.status(200).send({ result: true, message: "Departments updated successfully", data: updated });
@@ -81,8 +81,8 @@ route.delete('/:id', async (req, res) => {
         return res.status(400).send({ result: false, message: "Invalid id", data: null });
     }
     try {
-       const role = Roles.find({ name: "Admin" });
-        if (true) {
+        const role = await Roles.findOne({ name: "Admin" });
+        if (req.user.role.equals(role._id)) {
             const deleted = await Departments.findByIdAndDelete(id);
             res.status(200).send({ result: true, message: "Departments deleted successfully", data: deleted });
         }

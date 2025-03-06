@@ -6,7 +6,7 @@ import { roles_validation } from '../utils/validation_schemas.js';
 import { Types } from 'mongoose';
 
 const route = Router();
-// route.use(passport.authenticate('jwt', { session: false }));
+route.use(passport.authenticate('jwt', { session: false }));
 
 // get roles
 route.get('/', async (req, res) => {

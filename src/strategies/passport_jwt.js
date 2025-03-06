@@ -9,15 +9,17 @@ opts.secretOrKey = process.env.JWT_SECRET;
 passport.use(new JwtStrategy(opts, async function (jwt_payload, done) {
     console.log(jwt_payload);
     try {
-        let user = await Users.find(jwt_payload.user_id);
+        let user = await Users.findOne({ user_id : jwt_payload.user_id });
         if (user) {
             done(null, user);
         }
         else {
-            done(null, null);
+            done(null, false);
         }
     } catch (error) {
-        console.error("Error whilw checking Bearer token : ", error);
-        done(error, null);
+        console.error("Error while checking Bearer token : ", error);
+        done(error, false);
     }
 }));
+
+export default passport;

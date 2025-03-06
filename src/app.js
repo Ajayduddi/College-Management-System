@@ -7,6 +7,7 @@ import users from './routes/users.js';
 import departments from './routes/departments.js';
 import roles from './routes/roles.js';
 import courses from './routes/courses.js';
+import './strategies/passport_jwt.js';
 
 const app = express();
 const port = process.env.PORT || 3000;
@@ -19,7 +20,6 @@ const mongodb = mongoose.connect(process.env.MONGO_URI).then((result) => {
 }).catch((err) => {
     console.log("Error while connecting with mongodb", err);
 });
-
 
 // set-up cors
 app.use(cors({
@@ -35,6 +35,11 @@ app.set('trust proxy', 1);
 // initilize passport
 app.use(passport.initialize())
 
+// logging request
+app.use(function (req, res, next) {
+    console.log(`${new Date().toISOString().split('T').join(' ')} ${req.method} ${req.url}`);
+    next();
+});
 
 app.get('/', (req, res) => {
     console.log("Welcome to the project");
@@ -53,5 +58,5 @@ app.use((err, req, res, next) => {
 });
 
 app.listen(port, () => {
-    console.log(`Aplication started at http://localhost:${port}/`);
+    console.log(`Application started at http://localhost:${port}/`);
 })

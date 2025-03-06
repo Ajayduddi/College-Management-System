@@ -8,7 +8,7 @@ import { generateCourseId } from '../utils/helper.js';
 import { Types } from 'mongoose';
 
 const route = Router();
-// route.use(passport.authenticate('jwt', { session: false }));
+route.use(passport.authenticate('jwt', { session: false }));
 
 // get courses list
 route.get('/', async (req, res) => {
@@ -33,8 +33,8 @@ route.post('/', checkSchema(course_validation), (req, res, next) => {
     async (req, res) => {
         const data = matchedData(req);
         try {
-            const role = Roles.find({ name: "Admin" });
-            if (true) {
+             const role = await Roles.findOne({ name: "Admin" });
+            if (req.user.role.equals(role._id)) {
                 data.course_id = generateCourseId();
                 const newCourse = new Courses(data);
                 const saveCourses = await newCourse.save();
@@ -66,8 +66,8 @@ route.post('/:id', checkSchema(course_validation), (req, res, next) => {
         }
         const data = matchedData(req);
         try {
-            const role = Roles.find({ name: "Admin" });
-            if (true) {
+             const role = await Roles.findOne({ name: "Admin" });
+            if (req.user.role.equals(role._id)) {
                 const updated = await Courses.findByIdAndUpdate(id, data);
                 res.status(200).send({ result: true, message: "Course updated successfully", data: updated });
             }
@@ -89,8 +89,8 @@ route.delete('/:id',async (req, res) => {
         }
         
         try {
-            const role = Roles.find({ name: "Admin" });
-            if (true) {
+             const role = await Roles.findOne({ name: "Admin" });
+            if (req.user.role.equals(role._id)) {
                 const deleted = await Courses.findByIdAndDelete(id);
                 res.status(200).send({ result: true, message: "Course deleted successfully", data: deleted });
             }

@@ -1,6 +1,6 @@
 {
     "info": {
-        "_postman_id": "f389dc9b-7a4c-41f7-a8ab-9db47652d272",
+        "_postman_id": "827e646d-c7a2-43fb-b49e-8d27709cbd16",
         "name": "college system",
         "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
         "description": ""
@@ -28,7 +28,13 @@
                                 "1"
                             ],
                             "port": "4000"
-                        }
+                        },
+                        "header": [
+                            {
+                                "key": "Authorization",
+                                "value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoiMjEwMzFBMDUxMyIsImlhdCI6MTc0MTI4MzY3NSwiZXhwIjoxNzQxMzcwMDc1fQ.RSNNfEhLtYq5gy9kLfQtmY3ur7bfDzAXtHFD5l5KeUM"
+                            }
+                        ]
                     }
                 },
                 {
@@ -51,6 +57,12 @@
                             ],
                             "port": "4000"
                         },
+                        "header": [
+                            {
+                                "key": "Authorization",
+                                "value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoiMjEwMzFBMDUxMyIsImlhdCI6MTc0MTI4MzY3NSwiZXhwIjoxNzQxMzcwMDc1fQ.RSNNfEhLtYq5gy9kLfQtmY3ur7bfDzAXtHFD5l5KeUM"
+                            }
+                        ],
                         "body": {
                             "mode": "raw",
                             "options": {
@@ -67,12 +79,12 @@
                     "request": {
                         "method": "POST",
                         "url": {
-                            "raw": "http://127.0.0.1:4000/api/v1/departments/67c20ea6389cb72ec5175165",
+                            "raw": "http://127.0.0.1:4000/api/v1/departments/67c9e6a0fd4b64b47f0a1620",
                             "path": [
                                 "api",
                                 "v1",
                                 "departments",
-                                "67c20ea6389cb72ec5175165"
+                                "67c9e6a0fd4b64b47f0a1620"
                             ],
                             "protocol": "http",
                             "host": [
@@ -83,6 +95,12 @@
                             ],
                             "port": "4000"
                         },
+                        "header": [
+                            {
+                                "key": "Authorization",
+                                "value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoiMjEwMzFBMDUxMyIsImlhdCI6MTc0MTI4MzY3NSwiZXhwIjoxNzQxMzcwMDc1fQ.RSNNfEhLtYq5gy9kLfQtmY3ur7bfDzAXtHFD5l5KeUM"
+                            }
+                        ],
                         "body": {
                             "mode": "raw",
                             "options": {
@@ -99,12 +117,12 @@
                     "request": {
                         "method": "DELETE",
                         "url": {
-                            "raw": "http://127.0.0.1:4000/api/v1/departments/67c20ea6389cb72ec5175165",
+                            "raw": "http://127.0.0.1:4000/api/v1/departments/67c9e6a0fd4b64b47f0a1620",
                             "path": [
                                 "api",
                                 "v1",
                                 "departments",
-                                "67c20ea6389cb72ec5175165"
+                                "67c9e6a0fd4b64b47f0a1620"
                             ],
                             "protocol": "http",
                             "host": [
@@ -114,7 +132,13 @@
                                 "1"
                             ],
                             "port": "4000"
-                        }
+                        },
+                        "header": [
+                            {
+                                "key": "Authorization",
+                                "value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoiMjEwMzFBMDUxMyIsImlhdCI6MTc0MTI4MzY3NSwiZXhwIjoxNzQxMzcwMDc1fQ.RSNNfEhLtYq5gy9kLfQtmY3ur7bfDzAXtHFD5l5KeUM"
+                            }
+                        ]
                     }
                 }
             ]
@@ -141,7 +165,13 @@
                                 "1"
                             ],
                             "port": "4000"
-                        }
+                        },
+                        "header": [
+                            {
+                                "key": "Authorization",
+                                "value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoiMjEwMzFBMDUxMyIsImlhdCI6MTc0MTI4MzY3NSwiZXhwIjoxNzQxMzcwMDc1fQ.RSNNfEhLtYq5gy9kLfQtmY3ur7bfDzAXtHFD5l5KeUM"
+                            }
+                        ]
                     }
                 },
                 {
@@ -164,6 +194,12 @@
                             ],
                             "port": "4000"
                         },
+                        "header": [
+                            {
+                                "key": "Authorization",
+                                "value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoiMjEwMzFBMDUxMyIsImlhdCI6MTc0MTI4MzY3NSwiZXhwIjoxNzQxMzcwMDc1fQ.RSNNfEhLtYq5gy9kLfQtmY3ur7bfDzAXtHFD5l5KeUM"
+                            }
+                        ],
                         "body": {
                             "mode": "raw",
                             "options": {
@@ -180,12 +216,12 @@
                     "request": {
                         "method": "POST",
                         "url": {
-                            "raw": "http://127.0.0.1:4000/api/v1/roles/67c20cd40dfffb03afa722cf",
+                            "raw": "http://127.0.0.1:4000/api/v1/roles/67c9e604fd4b64b47f0a1610",
                             "path": [
                                 "api",
                                 "v1",
                                 "roles",
-                                "67c20cd40dfffb03afa722cf"
+                                "67c9e604fd4b64b47f0a1610"
                             ],
                             "protocol": "http",
                             "host": [
@@ -196,6 +232,12 @@
                             ],
                             "port": "4000"
                         },
+                        "header": [
+                            {
+                                "key": "Authorization",
+                                "value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoiMjEwMzFBMDUxMyIsImlhdCI6MTc0MTI4MzY3NSwiZXhwIjoxNzQxMzcwMDc1fQ.RSNNfEhLtYq5gy9kLfQtmY3ur7bfDzAXtHFD5l5KeUM"
+                            }
+                        ],
                         "body": {
                             "mode": "raw",
                             "options": {
@@ -212,12 +254,12 @@
                     "request": {
                         "method": "DELETE",
                         "url": {
-                            "raw": "http://127.0.0.1:4000/api/v1/roles/67c20cd40dfffb03afa722cf",
+                            "raw": "http://127.0.0.1:4000/api/v1/roles/67c9e604fd4b64b47f0a1610",
                             "path": [
                                 "api",
                                 "v1",
                                 "roles",
-                                "67c20cd40dfffb03afa722cf"
+                                "67c9e604fd4b64b47f0a1610"
                             ],
                             "protocol": "http",
                             "host": [
@@ -227,7 +269,13 @@
                                 "1"
                             ],
                             "port": "4000"
-                        }
+                        },
+                        "header": [
+                            {
+                                "key": "Authorization",
+                                "value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoiMjEwMzFBMDUxMyIsImlhdCI6MTc0MTI4MzY3NSwiZXhwIjoxNzQxMzcwMDc1fQ.RSNNfEhLtYq5gy9kLfQtmY3ur7bfDzAXtHFD5l5KeUM"
+                            }
+                        ]
                     }
                 }
             ]
@@ -254,7 +302,13 @@
                                 "1"
                             ],
                             "port": "4000"
-                        }
+                        },
+                        "header": [
+                            {
+                                "key": "Authorization",
+                                "value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoiMjEwMzFBMDUxMyIsImlhdCI6MTc0MTI4MzY3NSwiZXhwIjoxNzQxMzcwMDc1fQ.RSNNfEhLtYq5gy9kLfQtmY3ur7bfDzAXtHFD5l5KeUM"
+                            }
+                        ]
                     }
                 },
                 {
@@ -277,6 +331,12 @@
                             ],
                             "port": "4000"
                         },
+                        "header": [
+                            {
+                                "key": "Authorization",
+                                "value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoiMjEwMzFBMDUxMyIsImlhdCI6MTc0MTI4MzY3NSwiZXhwIjoxNzQxMzcwMDc1fQ.RSNNfEhLtYq5gy9kLfQtmY3ur7bfDzAXtHFD5l5KeUM"
+                            }
+                        ],
                         "body": {
                             "mode": "raw",
                             "options": {
@@ -284,7 +344,7 @@
                                     "language": "json"
                                 }
                             },
-                            "raw": "{\n  \"user_id\" : \"21031A0513\",\n  \"name\" : \"Admin\",\n  \"email\": \"admin@gmail.com\",\n  \"phone_no\" : 9014404336,\n  \"password\": \"Admin@123\",\n  \"dob\":\"09-11-2003\",\n  \"dept\" : \"67c20e7d389cb72ec517515a\",\n  \"role\" : \"67c20c670dfffb03afa722c7\"\n}"
+                            "raw": "{\n  \"user_id\" : \"21031A0514\",\n  \"name\" : \"ajay\",\n  \"email\": \"ajay@gmail.com\",\n  \"phone_no\" : 9014404336,\n  \"password\": \"Admin@123\",\n  \"dob\":\"09-11-2003\",\n  \"dept\" : \"67c20e7d389cb72ec517515a\",\n  \"role\" : \"67c20c670dfffb03afa722c7\"\n}"
                         }
                     }
                 },
@@ -293,12 +353,12 @@
                     "request": {
                         "method": "POST",
                         "url": {
-                            "raw": "http://127.0.0.1:4000/api/v1/users/67c211b4d3c8cf70029fb901",
+                            "raw": "http://127.0.0.1:4000/api/v1/users/67c9e41024af4d72730005df",
                             "path": [
                                 "api",
                                 "v1",
                                 "users",
-                                "67c211b4d3c8cf70029fb901"
+                                "67c9e41024af4d72730005df"
                             ],
                             "protocol": "http",
                             "host": [
@@ -309,6 +369,12 @@
                             ],
                             "port": "4000"
                         },
+                        "header": [
+                            {
+                                "key": "Authorization",
+                                "value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoiMjEwMzFBMDUxMyIsImlhdCI6MTc0MTI4MzY3NSwiZXhwIjoxNzQxMzcwMDc1fQ.RSNNfEhLtYq5gy9kLfQtmY3ur7bfDzAXtHFD5l5KeUM"
+                            }
+                        ],
                         "body": {
                             "mode": "raw",
                             "options": {
@@ -316,7 +382,7 @@
                                     "language": "json"
                                 }
                             },
-                            "raw": "{\n  \"user_id\" : \"21031A0513\",\n  \"name\" : \"Admin\",\n  \"email\": \"admin@gmail.com\",\n  \"phone_no\" : 9014404336,\n  \"password\": \"Admin@123\",\n  \"dob\":\"09-11-2003\",\n  \"dept\" : \"67c20e7d389cb72ec517515a\",\n  \"role\" : \"67c20c670dfffb03afa722c7\"\n}"
+                            "raw": "{\n  \"user_id\" : \"21031A0515\",\n  \"name\" : \"ajay\",\n  \"email\": \"ajay@gmail.com\",\n  \"phone_no\" : 57577577,\n  \"password\": \"Admin@123\",\n  \"dob\":\"09-11-2003\",\n  \"dept\" : \"67c20e7d389cb72ec517515a\",\n  \"role\" : \"67c20c670dfffb03afa722c7\"\n}"
                         }
                     }
                 },
@@ -325,12 +391,12 @@
                     "request": {
                         "method": "DELETE",
                         "url": {
-                            "raw": "http://127.0.0.1:4000/api/v1/users/67c214fbba7edee9317d8099",
+                            "raw": "http://127.0.0.1:4000/api/v1/users/67c9e41024af4d72730005df",
                             "path": [
                                 "api",
                                 "v1",
                                 "users",
-                                "67c214fbba7edee9317d8099"
+                                "67c9e41024af4d72730005df"
                             ],
                             "protocol": "http",
                             "host": [
@@ -340,6 +406,51 @@
                                 "1"
                             ],
                             "port": "4000"
+                        },
+                        "header": [
+                            {
+                                "key": "Authorization",
+                                "value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoiMjEwMzFBMDUxMyIsImlhdCI6MTc0MTI4MzY3NSwiZXhwIjoxNzQxMzcwMDc1fQ.RSNNfEhLtYq5gy9kLfQtmY3ur7bfDzAXtHFD5l5KeUM"
+                            }
+                        ]
+                    }
+                },
+                {
+                    "name": "login",
+                    "request": {
+                        "method": "POST",
+                        "url": {
+                            "raw": "http://127.0.0.1:4000/api/v1/users/login",
+                            "path": [
+                                "api",
+                                "v1",
+                                "users",
+                                "login"
+                            ],
+                            "protocol": "http",
+                            "host": [
+                                "127",
+                                "0",
+                                "0",
+                                "1"
+                            ],
+                            "port": "4000"
+                        },
+                        "header": [
+                            {
+                                "key": "Authorization",
+                                "value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoiMjEwMzFBMDUxMyIsImlhdCI6MTc0MTI4MzI0MSwiZXhwIjoxNzQxMzY5NjQxfQ._apxs4hVqjsvg5SFxHc_C8aIse41zp84ulrsUexzsj",
+                                "disabled": true
+                            }
+                        ],
+                        "body": {
+                            "mode": "raw",
+                            "options": {
+                                "raw": {
+                                    "language": "json"
+                                }
+                            },
+                            "raw": "{\n  \"email\" : \"admin@gmail.com\",\n  \"password\" : \"Admin@123\"\n}"
                         }
                     }
                 }
