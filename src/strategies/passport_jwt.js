@@ -10,7 +10,7 @@ passport.use(new JwtStrategy(opts, async function (jwt_payload, done) {
     console.log(jwt_payload);
     try {
         let user = await Users.findOne({ user_id : jwt_payload.user_id });
-        if (user) {
+        if (user.status === "Active") {
             done(null, user);
         }
         else {
