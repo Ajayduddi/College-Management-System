@@ -13,7 +13,41 @@ route.use(passport.authenticate('jwt', { session: false }));
 // get departments
 route.get('/', async (req, res) => {
     try {
-        const data = await Departments.find();
+        const { search, limit = 10, page = 1, sort = "Asscending" } = req.query;
+        const query = {};
+        let sort_id;
+        if (sort === "Descending") {
+            sort_id = -1;
+        }
+        else {
+            sort_id = 1;
+        }
+        
+        if (search) {
+            const regex = new RegExp(search, "i");
+            query.$or = [
+                { dept_id: regex },
+                { name: regex },
+                { status: regex },
+            ];
+        }
+
+        const data = await Departments.find(query).sort({ created_at: sort_id }).skip((page - 1) * limit).limit(limit);
+        res.status(200).send({ result: true, message: "Data fetch successfully", data: data });
+    } catch (error) {
+        console.error("Error while fetching Departments : ", error);
+        res.status(500).send({ result: false, message: "Internal server Error while getting Departments", data: error })
+    }
+});
+
+// get department by id
+route.get('/:id', async (req, res) => {
+    const id = req.params.id;
+    if (!Types.ObjectId.isValid(id)) {
+        return res.status(400).send({ result: false, message: "Invalid id", data: null });
+    }
+    try {
+        const data = await Departments.findById(id);
         res.status(200).send({ result: true, message: "Data fetch successfully", data: data });
     } catch (error) {
         console.error("Error while fetching Departments : ", error);
@@ -30,9 +64,12 @@ route.post('/', checkSchema(department_validation), (req, res, next) => {
     next();
 }, async (req, res) => {
     try {
-         const role = await Roles.findOne({ name: "Admin" });
+        const role = await Roles.findOne({ name: "Admin" });
         if (req.user.role.equals(role._id)) { 
             const data = matchedData(req);
+            if (!Types.ObjectId.isValid(data.created_by)) {
+                return res.status(400).send({ result: false, message: "Invalid created_by id", data: [] });
+            }
             data.dept_id = generateDeptId();
             const newDept = await Departments.create(data);
             res.status(201).send({ result: true, message: "Departments created successfully", data: newDept });
@@ -62,6 +99,9 @@ route.post('/:id', checkSchema(department_validation), (req, res, next) => {
         const role = await Roles.findOne({ name: "Admin" });
         if (req.user.role.equals(role._id)) {
             const data = matchedData(req);
+            if (!Types.ObjectId.isValid(data.created_by)) {
+                return res.status(400).send({ result: false, message: "Invalid created_by id", data: [] });
+            }
             const updated = await Departments.findByIdAndUpdate(id, data);
             res.status(200).send({ result: true, message: "Departments updated successfully", data: updated });
         }

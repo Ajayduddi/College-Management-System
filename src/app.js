@@ -7,6 +7,9 @@ import users from './routes/users.js';
 import departments from './routes/departments.js';
 import roles from './routes/roles.js';
 import courses from './routes/courses.js';
+import announcements from './routes/announcements.js';
+import batches from './routes/batches.js';
+import academics from './routes/academics.js';
 import './strategies/passport_jwt.js';
 
 const app = express();
@@ -51,6 +54,9 @@ app.use('/api/v1/users', users);
 app.use('/api/v1/courses', courses);
 app.use('/api/v1/departments', departments);
 app.use('/api/v1/roles', roles);
+app.use('/api/v1/announcements', announcements);
+app.use('/api/v1/batches', batches);
+app.use('/api/v1/academics', academics);
 
 app.use((err, req, res, next) => {
     console.log(err);

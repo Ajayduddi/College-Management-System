@@ -44,6 +44,10 @@ const userSchema = new Schema({
     status: {
         type: String,
         default: "Active",
+    },
+    created_by: {
+        type: Schema.Types.ObjectId,
+        ref: "users"
     }
 }, { timestamps: { createdAt: 'created_at', updatedAt: 'updated_at' } });
 

@@ -1,0 +1,1018 @@
+{
+	"info": {
+		"_postman_id": "1c3c199d-e85a-49b3-87db-3a2c52ab6fd6",
+		"name": "college system",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json",
+		"_exporter_id": "32548862"
+	},
+	"item": [
+		{
+			"name": "departments",
+			"item": [
+				{
+					"name": "getDepartments",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoiMjEwMzFBMDUxMyIsImlhdCI6MTc0MTQ1MzYwMSwiZXhwIjoxNzQxNTQwMDAxfQ.HPVG3ihue6f-9Wx7PaCU4K9ynsEm-6zOu_-1fAEF2Co"
+							}
+						],
+						"url": {
+							"raw": "http://127.0.0.1:4000/api/v1/departments?search=&limit=3&page=1&sort=Descending",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "4000",
+							"path": [
+								"api",
+								"v1",
+								"departments"
+							],
+							"query": [
+								{
+									"key": "search",
+									"value": ""
+								},
+								{
+									"key": "limit",
+									"value": "3"
+								},
+								{
+									"key": "page",
+									"value": "1"
+								},
+								{
+									"key": "sort",
+									"value": "Descending"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "addDepartment",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoiMjEwMzFBMDUxMyIsImlhdCI6MTc0MTI4MzY3NSwiZXhwIjoxNzQxMzcwMDc1fQ.RSNNfEhLtYq5gy9kLfQtmY3ur7bfDzAXtHFD5l5KeUM"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"name\" : \"test\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "http://127.0.0.1:4000/api/v1/departments"
+					},
+					"response": []
+				},
+				{
+					"name": "updateDepartments",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoiMjEwMzFBMDUxMyIsImlhdCI6MTc0MTI4MzY3NSwiZXhwIjoxNzQxMzcwMDc1fQ.RSNNfEhLtYq5gy9kLfQtmY3ur7bfDzAXtHFD5l5KeUM"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"name\" : \"sample\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "http://127.0.0.1:4000/api/v1/departments/67c9e6a0fd4b64b47f0a1620"
+					},
+					"response": []
+				},
+				{
+					"name": "deleteDepartment",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoiMjEwMzFBMDUxMyIsImlhdCI6MTc0MTI4MzY3NSwiZXhwIjoxNzQxMzcwMDc1fQ.RSNNfEhLtYq5gy9kLfQtmY3ur7bfDzAXtHFD5l5KeUM"
+							}
+						],
+						"url": "http://127.0.0.1:4000/api/v1/departments/67c9e6a0fd4b64b47f0a1620"
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "roles",
+			"item": [
+				{
+					"name": "getRoles",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoiMjEwMzFBMDUxMyIsImlhdCI6MTc0MTQ1MzYwMSwiZXhwIjoxNzQxNTQwMDAxfQ.HPVG3ihue6f-9Wx7PaCU4K9ynsEm-6zOu_-1fAEF2Co"
+							}
+						],
+						"url": {
+							"raw": "http://127.0.0.1:4000/api/v1/roles?search=&limit=2&page=1&sort=Descending",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "4000",
+							"path": [
+								"api",
+								"v1",
+								"roles"
+							],
+							"query": [
+								{
+									"key": "search",
+									"value": ""
+								},
+								{
+									"key": "limit",
+									"value": "2"
+								},
+								{
+									"key": "page",
+									"value": "1"
+								},
+								{
+									"key": "sort",
+									"value": "Descending"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "createRole",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoiMjEwMzFBMDUxMyIsImlhdCI6MTc0MTI4MzY3NSwiZXhwIjoxNzQxMzcwMDc1fQ.RSNNfEhLtYq5gy9kLfQtmY3ur7bfDzAXtHFD5l5KeUM"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"name\" : \"test\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "http://127.0.0.1:4000/api/v1/roles"
+					},
+					"response": []
+				},
+				{
+					"name": "updateRole",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoiMjEwMzFBMDUxMyIsImlhdCI6MTc0MTI4MzY3NSwiZXhwIjoxNzQxMzcwMDc1fQ.RSNNfEhLtYq5gy9kLfQtmY3ur7bfDzAXtHFD5l5KeUM"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"name\" : \"basic admin\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "http://127.0.0.1:4000/api/v1/roles/67c9e604fd4b64b47f0a1610"
+					},
+					"response": []
+				},
+				{
+					"name": "deleteRole",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoiMjEwMzFBMDUxMyIsImlhdCI6MTc0MTI4MzY3NSwiZXhwIjoxNzQxMzcwMDc1fQ.RSNNfEhLtYq5gy9kLfQtmY3ur7bfDzAXtHFD5l5KeUM"
+							}
+						],
+						"url": "http://127.0.0.1:4000/api/v1/roles/67c9e604fd4b64b47f0a1610"
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "users",
+			"item": [
+				{
+					"name": "getUsers",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoiMjEwMzFBMDUxMyIsImlhdCI6MTc0MTQ1MzYwMSwiZXhwIjoxNzQxNTQwMDAxfQ.HPVG3ihue6f-9Wx7PaCU4K9ynsEm-6zOu_-1fAEF2Co"
+							}
+						],
+						"url": {
+							"raw": "http://127.0.0.1:4000/api/v1/users?search=admin@gmail.com&limit=1&page=1&sort=Asscending",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "4000",
+							"path": [
+								"api",
+								"v1",
+								"users"
+							],
+							"query": [
+								{
+									"key": "search",
+									"value": "admin@gmail.com"
+								},
+								{
+									"key": "limit",
+									"value": "1"
+								},
+								{
+									"key": "page",
+									"value": "1"
+								},
+								{
+									"key": "sort",
+									"value": "Asscending"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "addUser",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoiMjEwMzFBMDUxMyIsImlhdCI6MTc0MTI4MzY3NSwiZXhwIjoxNzQxMzcwMDc1fQ.RSNNfEhLtYq5gy9kLfQtmY3ur7bfDzAXtHFD5l5KeUM"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"user_id\" : \"21031A0514\",\n  \"name\" : \"ajay\",\n  \"email\": \"ajay@gmail.com\",\n  \"phone_no\" : 9014404336,\n  \"password\": \"Admin@123\",\n  \"dob\":\"09-11-2003\",\n  \"dept\" : \"67c20e7d389cb72ec517515a\",\n  \"role\" : \"67c20c670dfffb03afa722c7\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "http://127.0.0.1:4000/api/v1/users"
+					},
+					"response": []
+				},
+				{
+					"name": "updateUser",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoiMjEwMzFBMDUxMyIsImlhdCI6MTc0MTI4MzY3NSwiZXhwIjoxNzQxMzcwMDc1fQ.RSNNfEhLtYq5gy9kLfQtmY3ur7bfDzAXtHFD5l5KeUM"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"user_id\" : \"21031A0515\",\n  \"name\" : \"ajay\",\n  \"email\": \"ajay@gmail.com\",\n  \"phone_no\" : 57577577,\n  \"password\": \"Admin@123\",\n  \"dob\":\"09-11-2003\",\n  \"dept\" : \"67c20e7d389cb72ec517515a\",\n  \"role\" : \"67c20c670dfffb03afa722c7\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "http://127.0.0.1:4000/api/v1/users/67c9e41024af4d72730005df"
+					},
+					"response": []
+				},
+				{
+					"name": "deletUser",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoiMjEwMzFBMDUxMyIsImlhdCI6MTc0MTI4MzY3NSwiZXhwIjoxNzQxMzcwMDc1fQ.RSNNfEhLtYq5gy9kLfQtmY3ur7bfDzAXtHFD5l5KeUM"
+							}
+						],
+						"url": "http://127.0.0.1:4000/api/v1/users/67c9e41024af4d72730005df"
+					},
+					"response": []
+				},
+				{
+					"name": "login",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoiMjEwMzFBMDUxMyIsImlhdCI6MTc0MTI4MzI0MSwiZXhwIjoxNzQxMzY5NjQxfQ._apxs4hVqjsvg5SFxHc_C8aIse41zp84ulrsUexzsj",
+								"disabled": true
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"email\" : \"admin@gmail.com\",\n  \"password\" : \"Admin@123\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "http://127.0.0.1:4000/api/v1/users/login"
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "courses",
+			"item": [
+				{
+					"name": "get_courses",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoiMjEwMzFBMDUxMyIsImlhdCI6MTc0MTQ1MzYwMSwiZXhwIjoxNzQxNTQwMDAxfQ.HPVG3ihue6f-9Wx7PaCU4K9ynsEm-6zOu_-1fAEF2Co"
+							}
+						],
+						"url": {
+							"raw": "http://127.0.0.1:4000/api/v1/courses?search=&limit=&page=&sort=",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "4000",
+							"path": [
+								"api",
+								"v1",
+								"courses"
+							],
+							"query": [
+								{
+									"key": "search",
+									"value": ""
+								},
+								{
+									"key": "limit",
+									"value": ""
+								},
+								{
+									"key": "page",
+									"value": ""
+								},
+								{
+									"key": "sort",
+									"value": ""
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "add course",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoiMjEwMzFBMDUxMyIsImlhdCI6MTc0MTQ1MzYwMSwiZXhwIjoxNzQxNTQwMDAxfQ.HPVG3ihue6f-9Wx7PaCU4K9ynsEm-6zOu_-1fAEF2Co",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\" : \"Java\",\r\n    \"details\" : \"java is OOPS language\",\r\n    \"credits\" : 3,\r\n    \"syllabus\" : \"my syllabus\",\r\n    \"created_by\" : \"67c6f164e4d4129f0f0608cc\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "http://127.0.0.1:4000/api/v1/courses"
+					},
+					"response": []
+				},
+				{
+					"name": "update course",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoiMjEwMzFBMDUxMyIsImlhdCI6MTc0MTQ1MzYwMSwiZXhwIjoxNzQxNTQwMDAxfQ.HPVG3ihue6f-9Wx7PaCU4K9ynsEm-6zOu_-1fAEF2Co",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\" : \"Java\",\r\n    \"details\" : \"java is OOPS language\",\r\n    \"credits\" : 3,\r\n    \"syllabus\" : \"core java\",\r\n    \"created_by\" : \"67c6f164e4d4129f0f0608cc\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://127.0.0.1:4000/api/v1/courses/:id",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "4000",
+							"path": [
+								"api",
+								"v1",
+								"courses",
+								":id"
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": "67cc94cc6d15b5341fc841bf"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "delete course",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoiMjEwMzFBMDUxMyIsImlhdCI6MTc0MTQ1MzYwMSwiZXhwIjoxNzQxNTQwMDAxfQ.HPVG3ihue6f-9Wx7PaCU4K9ynsEm-6zOu_-1fAEF2Co",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://127.0.0.1:4000/api/v1/courses/:id",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "4000",
+							"path": [
+								"api",
+								"v1",
+								"courses",
+								":id"
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": "67cc94cc6d15b5341fc841bf"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "batchs",
+			"item": [
+				{
+					"name": "get batches",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoiMjEwMzFBMDUxMyIsImlhdCI6MTc0MTQ1MzYwMSwiZXhwIjoxNzQxNTQwMDAxfQ.HPVG3ihue6f-9Wx7PaCU4K9ynsEm-6zOu_-1fAEF2Co",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://127.0.0.1:4000/api/v1/batches?search&limit&page&sort",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "4000",
+							"path": [
+								"api",
+								"v1",
+								"batches"
+							],
+							"query": [
+								{
+									"key": "search",
+									"value": null
+								},
+								{
+									"key": "limit",
+									"value": null
+								},
+								{
+									"key": "page",
+									"value": null
+								},
+								{
+									"key": "sort",
+									"value": null
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "add batch",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoiMjEwMzFBMDUxMyIsImlhdCI6MTc0MTQ1MzYwMSwiZXhwIjoxNzQxNTQwMDAxfQ.HPVG3ihue6f-9Wx7PaCU4K9ynsEm-6zOu_-1fAEF2Co",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\" : \"2021-2024 CSE\",\r\n    \"students_list\" : [\"67c6f164e4d4129f0f0608cc\"],\r\n    \"department\" : \"67c20e7d389cb72ec517515a\",\r\n    \"created_by\" : \"67c6f164e4d4129f0f0608cc\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "http://127.0.0.1:4000/api/v1/batches"
+					},
+					"response": []
+				},
+				{
+					"name": "update batchs",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoiMjEwMzFBMDUxMyIsImlhdCI6MTc0MTQ1MzYwMSwiZXhwIjoxNzQxNTQwMDAxfQ.HPVG3ihue6f-9Wx7PaCU4K9ynsEm-6zOu_-1fAEF2Co",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\" : \"2021-2024 CE\",\r\n    \"students_list\" : [\"67c6f164e4d4129f0f0608cc\"],\r\n    \"department\" : \"67c20e7d389cb72ec517515a\",\r\n    \"created_by\" : \"67c6f164e4d4129f0f0608cc\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://127.0.0.1:4000/api/v1/batches/:id",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "4000",
+							"path": [
+								"api",
+								"v1",
+								"batches",
+								":id"
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": "67cc97a37bf1468b8a273e5a"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "delete batch",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoiMjEwMzFBMDUxMyIsImlhdCI6MTc0MTQ1MzYwMSwiZXhwIjoxNzQxNTQwMDAxfQ.HPVG3ihue6f-9Wx7PaCU4K9ynsEm-6zOu_-1fAEF2Co",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://127.0.0.1:4000/api/v1/batches/:id",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "4000",
+							"path": [
+								"api",
+								"v1",
+								"batches",
+								":id"
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": "67cc97a37bf1468b8a273e5a"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "announcements",
+			"item": [
+				{
+					"name": "get announcements",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoiMjEwMzFBMDUxMyIsImlhdCI6MTc0MTQ1MzYwMSwiZXhwIjoxNzQxNTQwMDAxfQ.HPVG3ihue6f-9Wx7PaCU4K9ynsEm-6zOu_-1fAEF2Co",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://127.0.0.1:4000/api/v1/announcements?search&limit&page&sort",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "4000",
+							"path": [
+								"api",
+								"v1",
+								"announcements"
+							],
+							"query": [
+								{
+									"key": "search",
+									"value": null
+								},
+								{
+									"key": "limit",
+									"value": null
+								},
+								{
+									"key": "page",
+									"value": null
+								},
+								{
+									"key": "sort",
+									"value": null
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "add announcements",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoiMjEwMzFBMDUxMyIsImlhdCI6MTc0MTQ1MzYwMSwiZXhwIjoxNzQxNTQwMDAxfQ.HPVG3ihue6f-9Wx7PaCU4K9ynsEm-6zOu_-1fAEF2Co",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"title\" : \"4-2 Exams\",\r\n    \"content\" : \"R20 4-2 exam time table release\",\r\n    \"created_by\" : \"67c6f164e4d4129f0f0608cc\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "http://127.0.0.1:4000/api/v1/announcements"
+					},
+					"response": []
+				},
+				{
+					"name": "update announcements",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoiMjEwMzFBMDUxMyIsImlhdCI6MTc0MTQ1MzYwMSwiZXhwIjoxNzQxNTQwMDAxfQ.HPVG3ihue6f-9Wx7PaCU4K9ynsEm-6zOu_-1fAEF2Co",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"title\" : \"4-1 Exams\",\r\n    \"content\" : \"R20 4-2 exam time table release\",\r\n    \"created_by\" : \"67c6f164e4d4129f0f0608cc\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://127.0.0.1:4000/api/v1/announcements/:id",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "4000",
+							"path": [
+								"api",
+								"v1",
+								"announcements",
+								":id"
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": "67cc9a27b787f9ade7733904"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "delete announcements",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoiMjEwMzFBMDUxMyIsImlhdCI6MTc0MTQ1MzYwMSwiZXhwIjoxNzQxNTQwMDAxfQ.HPVG3ihue6f-9Wx7PaCU4K9ynsEm-6zOu_-1fAEF2Co",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://127.0.0.1:4000/api/v1/announcements/:id",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "4000",
+							"path": [
+								"api",
+								"v1",
+								"announcements",
+								":id"
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": "67cc9a27b787f9ade7733904"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "academics",
+			"item": [
+				{
+					"name": "get regulations",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoiMjEwMzFBMDUxMyIsImlhdCI6MTc0MTQ1MzYwMSwiZXhwIjoxNzQxNTQwMDAxfQ.HPVG3ihue6f-9Wx7PaCU4K9ynsEm-6zOu_-1fAEF2Co",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://127.0.0.1:4000/api/v1/academics?search&limit&page&sort",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "4000",
+							"path": [
+								"api",
+								"v1",
+								"academics"
+							],
+							"query": [
+								{
+									"key": "search",
+									"value": null
+								},
+								{
+									"key": "limit",
+									"value": null
+								},
+								{
+									"key": "page",
+									"value": null
+								},
+								{
+									"key": "sort",
+									"value": null
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "add regulation",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoiMjEwMzFBMDUxMyIsImlhdCI6MTc0MTQ1MzYwMSwiZXhwIjoxNzQxNTQwMDAxfQ.HPVG3ihue6f-9Wx7PaCU4K9ynsEm-6zOu_-1fAEF2Co",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"regulation\" : \"R20\",\r\n    \"department\" : \"67c20e7d389cb72ec517515a\",\r\n    \"semister\" :[{\r\n        \"semister_id\" : \"sem 1\",\r\n        \"course\" : \"67cc9b96b787f9ade7733918\",\r\n        \"syllabus\" : \"upload pdf\"\r\n    }],\r\n    \"syllabus\" : \"upload pdf\",\r\n    \"created_by\" : \"67c20e7d389cb72ec517515a\",\r\n    \"status\" : \"Active\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "http://127.0.0.1:4000/api/v1/academics"
+					},
+					"response": []
+				},
+				{
+					"name": "update regulation",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoiMjEwMzFBMDUxMyIsImlhdCI6MTc0MTQ1MzYwMSwiZXhwIjoxNzQxNTQwMDAxfQ.HPVG3ihue6f-9Wx7PaCU4K9ynsEm-6zOu_-1fAEF2Co",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"regulation\" : \"R20\",\r\n    \"department\" : \"67c20e7d389cb72ec517515a\",\r\n    \"semister\" :[{\r\n        \"semister_id\" : \"sem 5\",\r\n        \"course\" : \"67cc9b96b787f9ade7733918\",\r\n        \"syllabus\" : \"upload pdf\"\r\n    }],\r\n    \"syllabus\" : \"upload pdf\",\r\n    \"created_by\" : \"67c20e7d389cb72ec517515a\",\r\n    \"status\" : \"Active\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://127.0.0.1:4000/api/v1/academics/:id",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "4000",
+							"path": [
+								"api",
+								"v1",
+								"academics",
+								":id"
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": "67cc9c01b787f9ade773391f"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "delete regulation",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoiMjEwMzFBMDUxMyIsImlhdCI6MTc0MTQ1MzYwMSwiZXhwIjoxNzQxNTQwMDAxfQ.HPVG3ihue6f-9Wx7PaCU4K9ynsEm-6zOu_-1fAEF2Co",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://127.0.0.1:4000/api/v1/academics/:id",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "4000",
+							"path": [
+								"api",
+								"v1",
+								"academics",
+								":id"
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": "67cc9c01b787f9ade773391f"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "welcome",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": "http://127.0.0.1:4000/"
+			},
+			"response": []
+		}
+	]
+}

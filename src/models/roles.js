@@ -9,6 +9,10 @@ const rolesSchema = new Schema({
     status: {
         type: String,
         default : "Active"
+    },
+    created_by: {
+        type: Schema.Types.ObjectId,
+        ref: "users"
     }
 }, { timestamps: true });
 

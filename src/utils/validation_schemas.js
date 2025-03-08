@@ -24,6 +24,14 @@ export const course_validation = {
         isString: {
             errorMessage : "syllabus must be a string"
         }
+    },
+    created_by: {
+        isString: {
+            errorMessage: "Created by must be a string"
+        },
+        notEmpty: {
+            errorMessage: "Created by is required"
+        }
     }
 }
 
@@ -55,8 +63,12 @@ export const users_validation = {
             errorMessage: "phone_no must be a number"
         },
         notEmpty: {
-            errorMessage: "Naphone_no reuired"
-        }
+            errorMessage: "phone_no reuired"
+        },
+        isLength: {
+            options: { min: 10, max: 10 },
+            errorMessage: 'Contact number must be 10 digits',
+        },
     },
     password: {
         isString: {
@@ -80,6 +92,14 @@ export const users_validation = {
         notEmpty: {
             errorMessage : "role is required"
         }
+    },
+    created_by: {
+        isString: {
+            errorMessage: "Created by must be a string"
+        },
+        notEmpty: {
+            errorMessage: "Created by is required"
+        }
     }
 }
 
@@ -90,6 +110,14 @@ export const roles_validation = {
         },
         notEmpty: {
             errorMessage : "name is required"
+        }
+    },
+    created_by: {
+        isString: {
+            errorMessage: "Created by must be a string"
+        },
+        notEmpty: {
+            errorMessage: "Created by is required"
         }
     }
 }
@@ -102,5 +130,128 @@ export const department_validation = {
         notEmpty: {
             errorMessage : "Name is required"
         }
+    },
+    created_by: {
+        isString: {
+            errorMessage: "Created by must be a string"
+        },
+        notEmpty: {
+            errorMessage: "Created by is required"
+        }
     }
 }
+
+export const batch_validation = {
+    name: {
+        isString: {
+            errorMessage : "Name must be a string"
+        },
+        notEmpty: {
+            errorMessage : "Name is required"
+        }
+    },
+    department: {
+        isString: {
+            errorMessage : "Department id must be a string"
+        },
+        notEmpty: {
+            errorMessage : "Department id is required"
+        }
+    },
+    students_list: {
+        isArray: {
+            errorMessage : "Students list must be an array"
+        },
+        notEmpty: {
+            errorMessage : "Students list is required"
+        }
+    },
+    created_by: {
+        isString: {
+            errorMessage: "Created by must be a string"
+        },
+        notEmpty: {
+            errorMessage: "Created by is required"
+        }
+    }
+}
+
+export const announcement_validation = {
+    title: {
+        isString: {
+            errorMessage : "Title must be a string"
+        },
+        notEmpty: {
+            errorMessage : "Title is required"
+        }
+    },
+    content: {
+        isString: {
+            errorMessage : "Content must be a string"
+        },
+        notEmpty: {
+            errorMessage : "Content is required"
+        }
+    },
+    created_by: {
+        isString: {
+            errorMessage : "Created by must be a string"
+        },
+        notEmpty: {
+            errorMessage : "Created by is required"
+        }
+    }
+}
+
+export const regulatoion_validation = {
+    regulation: {
+        notEmpty: {
+            errorMessage: "Regulation is required"
+        },
+        isString: {
+            errorMessage: "Regulation must be a string"
+        },
+        isLength: {
+            options: { min: 3, max: 3 },
+            errorMessage: 'Regulation must be 3 characters',
+        },
+    },
+    department: {
+        notEmpty: {
+            errorMessage: "Department is required"
+        },
+        isString: {
+            errorMessage: "Department must be a string"
+        },
+    },
+    semister: {
+        notEmpty: {
+            errorMessage: "Semister is required"
+        },  
+        isArray: {
+            errorMessage: "Semister must be an array"
+        }
+    },
+    syllabus: {
+        notEmpty: {
+            errorMessage: "Syllabus is required"
+        },
+        isString: {
+            errorMessage: "Syllabus must be a string"   
+        }
+    },
+    status: {
+        isString: {
+            errorMessage: "Status must be a string"
+        },
+    },
+    created_by: {
+        isString: {
+            errorMessage: "Created by must be a string"
+        },
+        notEmpty: {
+            errorMessage: "Created by is required"
+        }
+    }
+}
+

@@ -2,8 +2,8 @@ import { Schema, model } from 'mongoose';
 
 const batchschema = new Schema({
     name: {
-        Type: String,
-        require: true,
+        type: String,
+        required: true,
         unique : true
     },
     students_list: [{
@@ -13,7 +13,11 @@ const batchschema = new Schema({
     department: {
         type: Schema.Types.ObjectId,
         ref: "departments",
-        require: true,
+        required: true,
+    },
+    created_by: {
+        type: Schema.Types.ObjectId,
+        ref: "users"
     }
 }, { timestamps: true });
 

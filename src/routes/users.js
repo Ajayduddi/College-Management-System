@@ -45,9 +45,42 @@ route.post('/login', [
 });
 
 // get users
-route.get('/', passport.authenticate('jwt', { session: false }),async (req, res) => {
+route.get('/', auth, async (req, res) => {
     try {
-        const data = await Users.find();
+        const { search,limit=10,page=1, sort = "Asscending" } = req.query;
+        const query = {};
+        let sort_id;
+        if (sort === "Descending") {
+            sort_id = -1;
+        }
+        else {
+            sort_id = 1;
+        }
+        
+        if (search) {
+            const regex = new RegExp(search, "i");
+            query.$or = [
+                { name: regex },
+                { email: regex },
+                { number: regex },
+                { status: regex },
+                { user_id: regex }
+            ];
+        }
+
+        const data = await Users.find(query).sort({ created_at: sort_id }).skip((page - 1) * limit).limit(limit);
+        res.status(200).send({ result: true, message: "Data fetched successfully", data: data });
+    } catch (error) {
+        console.error("Error while fetching Users: ", error);
+        res.status(500).send({ result: false, message: "Internal server error while getting Users", data: error });
+    }
+});
+
+// get user by id
+route.get('/:id', auth, async (req, res) => {
+    const id = req.params.id;
+    try {
+        const data = await Users.findOne({ user_id: id });
         res.status(200).send({ result: true, message: "Data fetch successfully", data: data });
     } catch (error) {
         console.error("Error while fetching Users : ", error);
@@ -67,6 +100,9 @@ route.post('/',auth, checkSchema(users_validation), (req, res, next) => {
         const role = await Roles.findOne({ name: "Admin" });
         if (req.user.role.equals(role._id)) {
             const data = matchedData(req);
+            if (!Types.ObjectId.isValid(data.created_by)) {
+                return res.status(400).send({ result: false, message: "Invalid created_by id", data: [] });
+            }
             data.user_id = data.user_id ? data.user_id : generateUserId();
             data.password = await generateHash(data.password);
             const newUser = await Users.create(data);
@@ -81,7 +117,7 @@ route.post('/',auth, checkSchema(users_validation), (req, res, next) => {
     }
 });
 
-// update users
+// update user
 route.post('/:id', auth, checkSchema(users_validation), (req, res, next) => {
     const result = validationResult(req);
     if (!result.isEmpty()) {
@@ -97,6 +133,9 @@ route.post('/:id', auth, checkSchema(users_validation), (req, res, next) => {
         const role = await Roles.findOne({ name: "Admin" });
         if (req.user.role.equals(role._id)) {
             const data = matchedData(req);
+            if (!Types.ObjectId.isValid(data.created_by)) {
+                return res.status(400).send({ result: false, message: "Invalid created_by id", data: [] });
+            }
             const updated = await Users.findByIdAndUpdate(id, data);
             res.status(200).send({ result: true, message: "Users updated successfully", data: updated });
         }
