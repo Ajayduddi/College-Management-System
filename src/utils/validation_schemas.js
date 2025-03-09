@@ -255,3 +255,93 @@ export const regulatoion_validation = {
     }
 }
 
+export const attendances_validation = {
+    batch: {
+        notEmpty: {
+            errorMessage: "Batch is required"
+        },
+        isString: {
+            errorMessage: "Batch must be a string"
+        },
+    },
+    department: {
+        notEmpty: {
+            errorMessage: "Department is required"
+        },
+        isString: {
+            errorMessage: "Department must be a string"
+        },
+    },
+    year: {
+        notEmpty: {
+            errorMessage: "Year is required"
+        },
+        isNumeric: {
+            errorMessage: "Year must be a number"
+        },
+    },
+    month: {
+        notEmpty: {
+            errorMessage: "Month is required"
+        },
+        isString: {
+            errorMessage: "Month must be a string"
+        },
+    },
+    date: {
+        notEmpty: {
+            errorMessage: "Date is required"
+        },
+        isString: {
+            errorMessage: "Date must be a string"
+        },
+    },
+    students_list: {
+        isArray: {
+            errorMessage: "Students list must be an array"
+        },
+    },
+    given_by: {
+        notEmpty: {
+            errorMessage: "Given by is required"
+        },
+        isString: {
+            errorMessage: "Given by must be a string"
+        },
+    }
+}
+
+export const faculty_validation = {
+    name: {
+        isString: {
+            errorMessage : "Name must be a string"
+        },
+        notEmpty: {
+            errorMessage : "Name is required"
+        }
+    },
+    department: {
+        isString: {
+            errorMessage : "Department id must be a string"
+        },
+        notEmpty: {
+            errorMessage : "Department id is required"
+        }
+    },
+    user_details: {
+        isString: {
+            errorMessage : "User details must be a string"
+        },
+        notEmpty: {
+            errorMessage : "User details is required"
+        }
+    },
+    courses_taught: {
+        isArray: {
+            errorMessage : "Courses taught must be an array"
+        },
+        notEmpty: {
+            errorMessage : "Courses taught is required"
+        }
+    },
+}

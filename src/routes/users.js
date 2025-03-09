@@ -29,7 +29,7 @@ route.post('/login', [
             if (comparePassword(req.body.password, user.password)) {
                 const role = await Roles.findById(user.role);
                 const token = "Bearer " + jwt.sign({ user_id: user.user_id }, process.env.JWT_SECRET, { expiresIn: process.env.JWT_EXPIRES });
-                res.status(200).send({ result: true, message: "Login successful", data: { token : token , email: user.email, name : user.name, role : role.name } });
+                res.status(200).send({ result: true, message: "Login successful", data: { token : token , id : user._id, email: user.email, name : user.name, role : role.name } });
             }
             else {
                 res.status(400).send({ result: false, message: "Invalid password", data: [] });

@@ -16,7 +16,7 @@
 						"header": [
 							{
 								"key": "Authorization",
-								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoiMjEwMzFBMDUxMyIsImlhdCI6MTc0MTQ1MzYwMSwiZXhwIjoxNzQxNTQwMDAxfQ.HPVG3ihue6f-9Wx7PaCU4K9ynsEm-6zOu_-1fAEF2Co"
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoiMjEwMzFBMDUxMyIsImlhdCI6MTc0MTU0NDA3OSwiZXhwIjoxNzQxNjMwNDc5fQ.zVmzGbTbGLomNTv50vojjwk_tb8PNJQpdtGGmKMIPB4"
 							}
 						],
 						"url": {
@@ -376,7 +376,7 @@
 						"header": [
 							{
 								"key": "Authorization",
-								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoiMjEwMzFBMDUxMyIsImlhdCI6MTc0MTQ1MzYwMSwiZXhwIjoxNzQxNTQwMDAxfQ.HPVG3ihue6f-9Wx7PaCU4K9ynsEm-6zOu_-1fAEF2Co"
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoiMjEwMzFBMDUxMyIsImlhdCI6MTc0MTU0NDA3OSwiZXhwIjoxNzQxNjMwNDc5fQ.zVmzGbTbGLomNTv50vojjwk_tb8PNJQpdtGGmKMIPB4"
 							}
 						],
 						"url": {
@@ -535,7 +535,7 @@
 						"header": [
 							{
 								"key": "Authorization",
-								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoiMjEwMzFBMDUxMyIsImlhdCI6MTc0MTQ1MzYwMSwiZXhwIjoxNzQxNTQwMDAxfQ.HPVG3ihue6f-9Wx7PaCU4K9ynsEm-6zOu_-1fAEF2Co",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoiMjEwMzFBMDUxMyIsImlhdCI6MTc0MTU0NDA3OSwiZXhwIjoxNzQxNjMwNDc5fQ.zVmzGbTbGLomNTv50vojjwk_tb8PNJQpdtGGmKMIPB4",
 								"type": "text"
 							}
 						],
@@ -997,6 +997,326 @@
 								{
 									"key": "id",
 									"value": "67cc9c01b787f9ade773391f"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "attendences",
+			"item": [
+				{
+					"name": "get attendences list",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoiMjEwMzFBMDUxMyIsImlhdCI6MTc0MTU0NDA3OSwiZXhwIjoxNzQxNjMwNDc5fQ.zVmzGbTbGLomNTv50vojjwk_tb8PNJQpdtGGmKMIPB4",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://127.0.0.1:4000/api/v1/attendences?search&limit=1&page&sort",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "4000",
+							"path": [
+								"api",
+								"v1",
+								"attendences"
+							],
+							"query": [
+								{
+									"key": "search",
+									"value": null
+								},
+								{
+									"key": "limit",
+									"value": "1"
+								},
+								{
+									"key": "page",
+									"value": null
+								},
+								{
+									"key": "sort",
+									"value": null
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "add attendence",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoiMjEwMzFBMDUxMyIsImlhdCI6MTc0MTU0NDA3OSwiZXhwIjoxNzQxNjMwNDc5fQ.zVmzGbTbGLomNTv50vojjwk_tb8PNJQpdtGGmKMIPB4",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"batch\": \"67cc9735566267d36941c1d9\",\r\n    \"department\" : \"67c20e7d389cb72ec517515a\",\r\n    \"year\" : 2025,\r\n    \"month\" : \"March\",\r\n    \"date\" : \"09-03-2025\",\r\n    \"students_list\" : [\"67c6f164e4d4129f0f0608cc\"],\r\n    \"given_by\" : \"67c6f164e4d4129f0f0608cc\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "http://127.0.0.1:4000/api/v1/attendences"
+					},
+					"response": []
+				},
+				{
+					"name": "update attendence",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoiMjEwMzFBMDUxMyIsImlhdCI6MTc0MTU0NDA3OSwiZXhwIjoxNzQxNjMwNDc5fQ.zVmzGbTbGLomNTv50vojjwk_tb8PNJQpdtGGmKMIPB4",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"batch\": \"67cc9735566267d36941c1d9\",\r\n    \"department\" : \"67c20e7d389cb72ec517515a\",\r\n    \"year\" : 2025,\r\n    \"month\" : \"March\",\r\n    \"date\" : \"09-04-2025\",\r\n    \"students_list\" : [\"67c6f164e4d4129f0f0608cc\"],\r\n    \"given_by\" : \"67c6f164e4d4129f0f0608cc\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://127.0.0.1:4000/api/v1/attendences/:id",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "4000",
+							"path": [
+								"api",
+								"v1",
+								"attendences",
+								":id"
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": "67cddc1282a382335ece342c"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "delete  attendence",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoiMjEwMzFBMDUxMyIsImlhdCI6MTc0MTU0NDA3OSwiZXhwIjoxNzQxNjMwNDc5fQ.zVmzGbTbGLomNTv50vojjwk_tb8PNJQpdtGGmKMIPB4",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://127.0.0.1:4000/api/v1/attendences/:id",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "4000",
+							"path": [
+								"api",
+								"v1",
+								"attendences",
+								":id"
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": "67cddc1282a382335ece342c"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "faculty",
+			"item": [
+				{
+					"name": "get faculty",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoiMjEwMzFBMDUxMyIsImlhdCI6MTc0MTU0NDA3OSwiZXhwIjoxNzQxNjMwNDc5fQ.zVmzGbTbGLomNTv50vojjwk_tb8PNJQpdtGGmKMIPB4",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://127.0.0.1:4000/api/v1/faculty?search&limit=10&page&sort",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "4000",
+							"path": [
+								"api",
+								"v1",
+								"faculty"
+							],
+							"query": [
+								{
+									"key": "search",
+									"value": null
+								},
+								{
+									"key": "limit",
+									"value": "10"
+								},
+								{
+									"key": "page",
+									"value": null
+								},
+								{
+									"key": "sort",
+									"value": null
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "add faculty",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoiMjEwMzFBMDUxMyIsImlhdCI6MTc0MTU0NDA3OSwiZXhwIjoxNzQxNjMwNDc5fQ.zVmzGbTbGLomNTv50vojjwk_tb8PNJQpdtGGmKMIPB4",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\" : \"Ajay Duddi\",\r\n    \"department\" : \"67c20e7d389cb72ec517515a\",\r\n    \"user_details\" : \"67c6f164e4d4129f0f0608cc\",\r\n    \"courses_taught\" : [\"67cc9b96b787f9ade7733918\"]\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "http://127.0.0.1:4000/api/v1/faculty"
+					},
+					"response": []
+				},
+				{
+					"name": "update faculty",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoiMjEwMzFBMDUxMyIsImlhdCI6MTc0MTU0NDA3OSwiZXhwIjoxNzQxNjMwNDc5fQ.zVmzGbTbGLomNTv50vojjwk_tb8PNJQpdtGGmKMIPB4",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\" : \"Ajay\",\r\n    \"department\" : \"67c20e7d389cb72ec517515a\",\r\n    \"user_details\" : \"67c6f164e4d4129f0f0608cc\",\r\n    \"courses_taught\" : [\"67cc9b96b787f9ade7733918\"]\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://127.0.0.1:4000/api/v1/faculty/:id",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "4000",
+							"path": [
+								"api",
+								"v1",
+								"faculty",
+								":id"
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": "67cddec4f15e14cc74930c37"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "delete faculty",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoiMjEwMzFBMDUxMyIsImlhdCI6MTc0MTU0NDA3OSwiZXhwIjoxNzQxNjMwNDc5fQ.zVmzGbTbGLomNTv50vojjwk_tb8PNJQpdtGGmKMIPB4",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://127.0.0.1:4000/api/v1/faculty/:id",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "4000",
+							"path": [
+								"api",
+								"v1",
+								"faculty",
+								":id"
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": "67cddec4f15e14cc74930c37"
 								}
 							]
 						}
